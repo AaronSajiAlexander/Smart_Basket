@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    background-color: #161623;
+    color: white;
+    flex-direction: column;
+    margin-bottom: 300px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+.log {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 7em;
+}
+
+.login-now {
+    text-align: center;
+}
+
+li,
+a,
+button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    flex-direction: row;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #fdc938;
+}
+
+.container.login-box {
+    padding: 60px 25px;
+    background-color: #fdc938;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    color: black;
+    font-weight: 900;
+}
+
+.container.login-box {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.container.login-box .forms {
+    display: flex;
+    align-items: center;
+    height: 480px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+.container.login-box .form {
+    width: 50%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: margin-left 0.18s ease;
+}
+
+.container.login-box.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container.login-box .signup {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+
+.container.login-box.active .signup {
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.login-box.active .forms {
+    height: 800px;
+}
+
+.container.login-box .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: rgb(255, 216, 113);
+    border-radius: 25px;
+}
+
+.form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: rgb(255, 216, 113);
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid)~i {
+    color: rgb(255, 216, 113);
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #161623;
+}
+
+.form .text {
+    color: #161623;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.form a.text {
+    color: #161623;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 35px;
+}
+
+.form .button input {
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    color: #161623;
+    font-size: 17px;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #fdc938;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: rgb(255, 216, 113);
+}
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/*footer section*/
+
+.footer {
+    margin-top: 255px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 290px;
+}
+
+
+/* Taller footer on small screens */
+
+@media (max-width:750px) {
+    body {
+        margin-bottom: 500px;
+    }
+    .footer {
+        height: 510px;
+    }
+}
+
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+
+footer {
+    padding-top: 30px;
+    background-color: #292c2f;
+    color: #bbb;
+}
+
+footer a {
+    color: #999;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #aaa;
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.navbar-brand,
+.footer .container .row .col-md-5 h5 {
+    position: top;
+    top: 0;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.8;
+    transform: rotateX(-90deg);
+    animation: navbar-brand 1.2s ease 1 normal forwards;
+    transition: all 2s ease-in;
+    display: flex;
+    flex: row;
+    /*  -webkit-animation-direction: normal; */
+}
+
+.navbar-brand h1:hover {
+    color: gold;
+}
+
+@keyframes navbar-brand {
+    10% {
+        opacity: 0.5;
+        color: gold;
+    }
+    20% {
+        opacity: 0.8;
+        top: 3.75em;
+        transform: rotateX(-360deg);
+        color: goldenrod;
+    }
+    100% {
+        opacity: 1;
+        top: 4.50em;
+        transform: rotateX(360deg);
+    }
+}
+
+.bg-dark,
+.navbar-expand-lg,
+.navbar {
+    position: relative;
+    background: linear-gradient(45deg, #080719, #B9601C, #F3B94E);
+    animation: change 10s ease-in infinite;
+}
+
+@keyframes change {
+    0% {
+        background-position: 20% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-weight: 900 !important;
+}

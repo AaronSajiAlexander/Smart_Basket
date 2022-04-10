@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #161623;
+    color: white;
+    margin-bottom: 300px;
+    overflow: scroll;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+
+/*--Hero--*/
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#hero:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 130%;
+    height: 95%;
+    background: url("images/donation.jpg") center top no-repeat;
+    z-index: 0;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+#hero:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 130%;
+    height: 96%;
+    opacity: 0.3;
+    z-index: 0;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) translateY(18px) rotate(2deg);
+}
+
+#hero .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero h2 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#hero p {
+    width: 80%;
+    animation-delay: 0.2s;
+    margin: 0 auto 30px auto;
+    color: white;
+}
+
+#hero .carousel-control-prev,
+#hero .carousel-control-next {
+    width: 10%;
+}
+
+#hero .carousel-control-next-icon,
+#hero .carousel-control-prev-icon {
+    background: none;
+    font-size: 48px;
+    line-height: 1;
+    width: auto;
+    height: auto;
+}
+
+#hero .hero-btn {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 10px;
+    color: white;
+    animation-delay: 0.2s;
+    border: 2px solid rgb(251, 255, 0);
+}
+
+#hero .hero-btn:hover {
+    background: #000000;
+    color: white;
+    text-decoration: none;
+}
+
+@media(min-width:1024px) {
+    #hero p {
+        width: 60%;
+    }
+    #hero.carousel-control-prev,
+    #hero .carousel-control-next {
+        width: 5%;
+    }
+}
+
+@media(max-width:768px) {
+    #hero h2 {
+        font-size: 28px;
+    }
+    #hero:after {
+        width: 180%;
+        height: 95%;
+        border-radius: 0 0 50% 50%;
+        transform: translateX(-50%) rotate(0deg);
+    }
+    #hero:before {
+        top: 0;
+        width: 180%;
+        height: 94%;
+        border-radius: 0 0 50% 50%;
+        transform: translateX(-50px) translateY(20px) rotate(4deg);
+    }
+}
+
+@media(max-width:575px) {
+    #hero:after {
+        left: 40%;
+        top: 0;
+        width: 200%;
+        height: 95%;
+        border-radius: 0 0 50% 50%;
+        transform: translateX(-50%) rotate(0deg);
+    }
+    #hero:before {
+        left: 50%;
+        top: 0;
+        width: 200%;
+        height: 94%;
+        border-radius: 0 0 50% 50%;
+        transform: translateX(-50%) translateY(20%) rotate(4deg);
+    }
+}
+
+
+/*----------About us-----------*/
+
+.tabs .nav-pills .nav-item {
+    margin-bottom: 10px;
+}
+
+.tabs .nav-pills .nav-item .nav-link {
+    background: goldenrod;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.tabs .nav-pills .nav-item .nav-link span {
+    color: #053001;
+    font-size: 30px;
+}
+
+.tabs .nav-pills .nav-item .nav-link.active {
+    color: white;
+    background: linear-gradient(-45deg, #0D0D0D, #262626, #404040, #737373, #A6A6A6);
+    border: 1px solid goldenrod;
+}
+
+.tabs .nav-pills .nav-item .nav-link.active span {
+    color: white;
+}
+
+.tabs .tab-content {
+    background: #161623;
+    padding: 0;
+}
+
+.tabs .tab-content h3 {
+    font-weight: bold;
+}
+
+.tabs .tab-content a {
+    color: goldenrod;
+}
+
+.tabs .tab-content .img {
+    /*1000x667*/
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+
+/*completed donations*/
+
+.counter-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    color: darkgoldenrod;
+}
+
+.counter {
+    font-size: 100px;
+}
+
+
+/*footer section*/
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 290px;
+}
+
+
+/* Taller footer on small screens */
+
+@media (max-width:750px) {
+    body {
+        margin-bottom: 500px;
+    }
+    .footer {
+        height: 530px;
+    }
+}
+
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+
+footer {
+    padding-top: 30px;
+    background-color: #292c2f;
+    color: #bbb;
+}
+
+footer a {
+    color: #999;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #aaa;
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #111118;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1em;
+    color: #fff;
+    position: left;
+}
+
+.navbar-brand,
+.footer .container .row .col-md-5 h5 {
+    position: top;
+    top: 0;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.8;
+    transform: rotateX(-90deg);
+    animation: navbar-brand 1.2s ease 1 normal forwards;
+    transition: all 2s ease-in;
+    display: flex;
+    flex: row;
+}
+
+.navbar-brand h1:hover {
+    color: gold;
+}
+
+@keyframes navbar-brand {
+    10% {
+        opacity: 0.5;
+        color: gold;
+    }
+    20% {
+        opacity: 0.8;
+        top: 3.75em;
+        transform: rotateX(-360deg);
+        color: goldenrod;
+    }
+    100% {
+        opacity: 1;
+        top: 4.50em;
+        transform: rotateX(360deg);
+    }
+}
+
+.bg-dark,
+.navbar-expand-lg,
+.navbar {
+    position: relative;
+    background: linear-gradient(45deg, #080719, #B9601C, #F3B94E);
+    animation: change 10s ease-in infinite;
+}
+
+@keyframes change {
+    0% {
+        background-position: 20% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.svg-file path {
+    fill: transparent;
+    stroke-width: 3;
+    stroke: gold
+}
+
+.svg-file.z-logo path {
+    stroke-dasharray: 550;
+    stroke-dashoffset: 0;
+}
+
+.svg-file.z-logo path {
+    animation: animate-zlogo 2s linear infinite;
+}
+
+.svg-file.z-logo svg {
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 1));
+    transform: scale(2);
+}
+
+.svg-file h2 {
+    font-family: "Roboto", cursive;
+    transform: translate(0, 50px) skewX(-210deg) rotate(-6deg);
+    font-size: 3em;
+    color: #c9a504;
+}
+
+.svg-file span {
+    animation: dots 2.5s steps(6, end) infinite;
+    font-size: 5em;
+    display: block;
+    transform: translate(0, 65px) skewX(-210deg) rotate(-6deg);
+    background-color: rgb(238, 222, 4);
+    width: 8px;
+    height: 5px;
+}
+
+@keyframes fadein-fadeout {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animate-zlogo {
+    0% {
+        stroke-dashoffset: -50;
+    }
+    20% {
+        stroke-dashoffset: 550;
+        fill: transparent;
+    }
+    40% {
+        fill: transparent;
+        stroke-dashoffset: 1100;
+    }
+    60% {
+        stroke-dashoffset: 1100;
+        fill: linear-gradient(45deg, #080719, #B9601C, #F3B94E);
+    }
+    80% {
+        stroke-width: 0;
+        fill: linear-gradient(45deg, #080719, #B9601C, #F3B94E);
+    }
+    100% {
+        /* stroke-dashoffset: 0; */
+        stroke-width: 3;
+        fill: transparent;
+    }
+}
+
+#preloader {
+    position: fixed;
+    z-index: 9999;
+    overflow: hidden;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.z-logo svg {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    display: flex;
+    width: 50%;
+}
+
+.z-logo::before {
+    content: "";
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    background: black;
+    position: absolute;
+    display: inline-flex;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
