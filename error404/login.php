@@ -1,16 +1,16 @@
 <?php
 
     session_start();
-    $server = "sql103.epizy.com";
-    $username = "epiz_31491912";
-    $password = "edjJonLakykVBT";
-    $dbname = "epiz_31491912_smartbasket";
+     $server = "sql201.epizy.com";
+    $username = "epiz_31524775";
+    $passwords = "jiBWj5netG";
+    $dbname = "epiz_31524775_smartbasket";
 
     $ngoid = $_POST['ngoid'];
     $password = $_POST['password'];
 
      //Database connection
-    $con = mysqli_connect($server,$username,$password,$dbname);
+    $con = mysqli_connect($server,$username,$passwords,$dbname);
     
     
     if($con->connect_error)

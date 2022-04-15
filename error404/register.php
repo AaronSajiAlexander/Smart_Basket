@@ -1,10 +1,11 @@
 <?php
 
     session_start();
-    $server = "sql103.epizy.com";
-    $username = "epiz_31491912";
-    $password = "edjJonLakykVBT";
-    $dbname = "epiz_31491912_smartbasket";
+
+    $server = "sql201.epizy.com";
+    $username = "epiz_31524775";
+    $passwords = "jiBWj5netG";
+    $dbname = "epiz_31524775_smartbasket";
     
 
     $name = $_POST['name'];
@@ -14,7 +15,8 @@
     $cpassword = $_POST['cpassword'];
 
     //Database connection
-    $con = mysqli_connect($server,$username,$password,$dbname);
+    $con = mysqli_connect($server,$username,$passwords,$dbname);
+
     if($con->connect_error)
     {
         echo "$con->connect-error";
@@ -53,16 +55,16 @@
         </SCRIPT>");
         }
         else{
-             $stmt = $con->prepare("INSERT INTO registration(name,ngoid,email,password,cpassword) VALUES(?,?,?,?,?)");
+        $stmt = $con->prepare("INSERT INTO registration(name,ngoid,email,password,cpassword) VALUES(?,?,?,?,?)");
         $stmt->bind_param("sssss",$name,$ngoid,$email,$password,$cpassword);
         $stmt->execute();       
         echo("<SCRIPT LANGUAGE='JavaScript'>
         window.alert('Registered Successfully')
         window.location.href='log.html';
         </SCRIPT>");
+        }
         $stmt->close();
         $con->close();
-        }
     }
 
 ?>
